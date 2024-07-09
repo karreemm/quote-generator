@@ -1,81 +1,135 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Akaya Telivigala", monospace, sans-serif;
-    font-size: 22px;
+
+html{
+    background-image: linear-gradient(180deg, #02AABD  0%, #00CDAC 100%);
+
 }
-body{
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #02AABD  0%, #00CDAC 100%);
+
+}
+.container {
+    background-color: #fff;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+  }
+  
+  .container h1 {
+    color: #159883;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .quote{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  
+  .quote p {
+    font-size: 1.25rem;
+  }
+  
+  .quote span {
+    color: #4a5568;
+    margin-top: 0.5rem;
+  }
+  
+  .btns-parent {
+    display: flex;
+    justify-content:center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .btns{
+    display: flex;
     justify-content: center;
-    min-height: 90vh;
+    align-items: center;
+    gap: 1rem;
+  }
+ 
+  .share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 8px 16px;
+    background-color: #159883 ;
+    color: #fff;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    font-weight: 700;
+
+  }
+  
+  .btn:hover {
+    background-color: #0d806c ;
+  }
+
+  .icon{
+    height: 20px;
+  }
+
+  .icon2{
+    height: 15px;
+  }
+
+  .btnImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .or {
     width: 100%;
     text-align: center;
-    background-color: #e3e3e3;
-    padding: 10px 0;
-}
-h1{
-    color: #262834;
-    font-size: 28px;
-    padding: 8px;
-}
-.container{
-    width: 96%;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #080808;
-    padding: 10px 5px 5px 5px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-}
-.container p{
-    color: #e3e3e3;
-    padding: 5px;
-    text-align: left;
-}
-.container span{
-    color: #e3e3e399;
-    font-size: 16px;
-    text-align: right;
-    width: 100%;
-    display: block;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: "Dancing Script", "Akaya Telivigala", monospace, sans-serif;
-}
-.btns{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(60px, auto);
-}
-.btns button{
-    padding: 8px;
-    margin: 5px;
-    background-color: #262834;
-    color: #e3e3e3;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    font-weight: 500;
-}
-.btns button.btn{
-    background-color: #56cbdb;
-    color: #262834;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .or::before,
+  .or::after {
+    content: '';
+    display: inline-block;
+    width: 40%;
+    border-top: 2px solid #333;
+    vertical-align: middle;
+  }
+  
+  .or span {
+    display: inline-block;
+    padding: 0 10px;
     font-weight: bold;
-}
-.btns button:first-of-type{
-    grid-column: 1/1;
-    grid-row: 1;
-}
-.btns button:last-of-type{
-    grid-column: 2/4;
-    grid-row: 1;
-}
+    color: #333;
+    background-color: #fff;
+  }
+  
+
+  
+  
+  
+
+ 
+
+  
