@@ -8,6 +8,7 @@ import telegramIcon from './images/telegram.png';
 import whatsappIcon from './images/whatsapp.png';
 import copyIcon from './images/copy.png';
 import quoteIcon from './images/quote.png';
+import shareIcon from './images/share.png';
 
 const App = () => {
   const url = "https://api.quotable.io/random";
@@ -28,8 +29,17 @@ const App = () => {
 
   const copy = () => {
     navigator.clipboard.writeText(`${quote.author} once said: ${quote.content}`);
-    alert('Quote copied!');
+    copyMessage();
   };
+
+  const copyMessage = () => {
+    const btn = document.getElementById('copyBtn');
+    btn.classList.add("keep");
+    btn.innerText = 'Copied Successfully!';
+      setTimeout(() => {
+      btn.innerHTML = 'Copy Quote <img src="' + copyIcon + '" alt="Copy" class="icon " />';
+        }, 3000);
+  }
 
   return (
     <div className="parent">
@@ -43,17 +53,20 @@ const App = () => {
         <div className='btns-parent'>
           <div className="btns">
             <button onClick={generateQuote} className="btn btnImage"> Another Quote <img src={quoteIcon} alt="WhatsApp" className="icon" /></button>
-            <button onClick={copy} className="btn btnImage">Copy <img src={copyIcon} alt="WhatsApp" className="icon2" /></button>
+            <button onClick={copy} id='copyBtn' className="btn btnImage">Copy Quote<img src={copyIcon} alt="WhatsApp" className="icon" /></button>
           </div>
           <div className='or'>
             <span>OR</span>
           </div>
-          <div className="share">
-            <button onClick={() => shareOnWhatsApp(quote)} className="btn btnImage">Share <img src={whatsappIcon} alt="WhatsApp" className="icon" /></button>
-            <button onClick={() => shareOnTwitter(quote)} className="btn btnImage">Share <img src={twitterIcon} alt="Twitter" className="icon" /></button>
-            <button onClick={() => shareOnFacebook(quote)} className="btn btnImage">Share <img src={facebookIcon} alt="Facebook" className="icon" /></button>
-            <button onClick={() => shareOnTelegram(quote)} className="btn btnImage">Share <img src={telegramIcon} alt="Telegram" className="icon" /></button>
-            <button onClick={() => shareOnLinkedIn(quote)} className="btn btnImage">Share <img src={linkedinIcon} alt="LinkedIn" className="icon" /></button>
+          <div class="share-button">
+              <span>
+                <img src={shareIcon} alt="WhatsApp" className="icon2 sp" /> Share!
+              </span>
+              <button onClick={() => shareOnWhatsApp(quote)} className="btn2 btnImage"> <img src={whatsappIcon} alt="WhatsApp" className="icon" /></button>
+              <button onClick={() => shareOnTwitter(quote)} className="btn2 btnImage"> <img src={twitterIcon} alt="Twitter" className="icon" /></button>
+              <button onClick={() => shareOnFacebook(quote)} className="btn2 btnImage"> <img src={facebookIcon} alt="Facebook" className="icon" /></button>
+              <button onClick={() => shareOnTelegram(quote)} className="btn2 btnImage"> <img src={telegramIcon} alt="Telegram" className="icon" /></button>
+              <button onClick={() => shareOnLinkedIn(quote)} className="btn2 btnImage"> <img src={linkedinIcon} alt="LinkedIn" className="icon" /></button>
           </div>
         </div>
       </div>
