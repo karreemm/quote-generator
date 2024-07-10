@@ -9,6 +9,7 @@ import whatsappIcon from './images/whatsapp.png';
 import copyIcon from './images/copy.png';
 import quoteIcon from './images/quote.png';
 import shareIcon from './images/share.png';
+import shareIcon2 from './images/share2.png';
 
 const App = () => {
   const url = "https://api.quotable.io/random";
@@ -58,9 +59,16 @@ const App = () => {
           <div className='or'>
             <span>OR</span>
           </div>
+
+          <span className="mobile">
+                <img src={shareIcon2} alt="share" className="icon" />
+                 <p className='mobile-text'>Share It Know !</ p> 
+          </span>
+
           <div class="share-button">
-              <span>
-                <img src={shareIcon} alt="WhatsApp" className="icon2 sp" /> Share!
+              <span className="parent2">
+                <img src={shareIcon} alt="share" className="icon2 sp child1" />
+                 <p className='child2'>Share It Know !</ p> 
               </span>
               <button onClick={() => shareOnWhatsApp(quote)} className="btn2 btnImage"> <img src={whatsappIcon} alt="WhatsApp" className="icon" /></button>
               <button onClick={() => shareOnTwitter(quote)} className="btn2 btnImage"> <img src={twitterIcon} alt="Twitter" className="icon" /></button>

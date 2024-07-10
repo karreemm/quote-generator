@@ -16,7 +16,7 @@ html{
     padding: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 90%;
+    width: 80%;
     max-width: 450px;
     margin: auto;
   }
@@ -208,9 +208,56 @@ html{
   .share-button button:nth-of-type(5) {
     transition-delay: 1s;
   }
-  
-  
 
+  .parent2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .child1{
+    display: inline-block;
+  }  
+  
+  .child2{
+    display: inline-block;
+  }
+  .mobile{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .parent2 {
+    display: none;
+    }
+    .share-button button {
+      flex: 1;
+      width: auto;
+      padding: 0;
+      color: #159883;
+      text-align: center;
+      opacity: 1;
+      transition: 0.3s linear;
+      z-index: 2;
+    }
+
+    .mobile{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .or {
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+    .mobile-text{
+      font-size: larger;
+    }
+
+
+  }
   
   
   
