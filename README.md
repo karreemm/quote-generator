@@ -1,7 +1,11 @@
-# quote-generator
+# Quote Generator
 
-hello there, your task is to add social media share buttons, which can be used to share quote on different social media platforms such as whatsapp, twitter, and so on.
-
-fork the repository and start working on it.
-
-best of luck.
+- **Description**: A simple quote generator that displays random quotes.
+- **Contributions**:
+  - Implemented all the styling for the website.
+  - Added social media share buttons to allow users to share quotes.
+- **How To Try It**:
+  - Clone This Repo
+  - Run This Command "npm install"
+  - Run This Command "npm start"
+  - Try It Now!
