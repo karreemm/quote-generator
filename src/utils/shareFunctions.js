@@ -11,10 +11,14 @@ export const shareOnWhatsApp = (quote) => {
   };
   
   export const shareOnFacebook = (quote) => {
-    const shareUrl = encodeURIComponent("https://QuoteGenerator.com");
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${`${quote.content} - ${quote.author}`}`;
+    const baseUrl = "https://QuoteGenerator.com";
+    const quoteText = encodeURIComponent(`${quote.content} - ${quote.author}`);
+    const shareUrl = encodeURIComponent(baseUrl);
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${quoteText}`;
     window.open(facebookShareUrl, '_blank');
   };
+  
+  
 
 
 export const shareOnTelegram = (quote) => {
