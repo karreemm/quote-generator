@@ -14,8 +14,8 @@ import shareIcon2 from './images/share2.png';
 const App = () => {
   const url = "https://api.quotable.io/random";
   let quoteData = {
-    content: "Let time be your only competitor.",
-    author: "Ahmed Saber"
+    content: "You only live once, but if you do it right, once is enough.",
+    author: "Mae West"
   };
   const [quote, setQuote] = useState(quoteData);
 
